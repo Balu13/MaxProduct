@@ -26,15 +26,28 @@ std::pair<int, int> NumberProducts::addVerticalFactor(int factor)
     return { vertical, factorsNum };
 }
 
-std::pair<int, int> NumberProducts::addDiagonalFactor(int factor)
+std::pair<int, int> NumberProducts::addRightDiagonalFactor(int factor)
 {
     int factorsNum{ -1 };
 
-    if (diagonalFactorsNum < adjacentNumber)
+    if (rightDiagonalFactorsNum < adjacentNumber)
     {
-        diagonal *= factor;
-        factorsNum = ++diagonalFactorsNum;
+        rightDiagonal *= factor;
+        factorsNum = ++rightDiagonalFactorsNum;
     }
 
-    return { diagonal, factorsNum };
+    return { rightDiagonal, factorsNum };
+}
+
+std::pair<int, int> NumberProducts::addLeftDiagonalFactor(int factor)
+{
+    int factorsNum{ -1 };
+
+    if (leftDiagonalFactorsNum < adjacentNumber)
+    {
+        leftDiagonal *= factor;
+        factorsNum = ++leftDiagonalFactorsNum;
+    }
+
+    return { leftDiagonal, factorsNum };
 }

@@ -113,7 +113,7 @@ void multiplyAboveNumbers(int colNo, int rowNo, int colNum, int factor,
     }
 }
 
-// multiply down-right diagonal numbers
+// multiply up-left diagonal numbers
 void multiplyRightDiagonalNumbers(int colNo, int rowNo, int colNum, int factor,
     std::vector<NumberProducts>& products,
     std::tuple<int, int, NumberProducts::Direction>& max)
@@ -137,7 +137,7 @@ void multiplyRightDiagonalNumbers(int colNo, int rowNo, int colNum, int factor,
     }
 }
 
-// multiply down-left diagonal numbers
+// multiply up-right diagonal numbers
 void multiplyLeftDiagonalNumbers(int colNo, int rowNo, int colNum, int factor,
     std::vector<NumberProducts>& products,
     std::tuple<int, int, NumberProducts::Direction>& max)
